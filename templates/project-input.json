@@ -1,0 +1,70 @@
+{
+  "project": {
+    "name": "示例200MW陆上风电项目",
+    "capacity_mw": 200,
+    "operating_years": 20,
+    "capex": 840000000,
+    "depreciable_fraction": 0.95,
+    "salvage_value": 0
+  },
+  "generation": {
+    "hours_mode": "net_settlement_hours",
+    "p50_hours": 2200,
+    "p90_hours": 2000,
+    "annual_degradation": 0.003,
+    "losses": {
+      "availability": 0.03,
+      "wake": 0.05,
+      "station_service": 0.01,
+      "line": 0.02,
+      "curtailment": 0.06
+    }
+  },
+  "pricing": {
+    "market_capture_price": 0.27,
+    "mechanism_share": 0.70,
+    "mechanism_price": 0.30,
+    "mechanism_reference_price": 0.27,
+    "mechanism_years": 12,
+    "green_value_per_kwh": 0.0,
+    "subsidy_per_kwh": 0.0,
+    "other_annual_revenue": 0.0
+  },
+  "costs": {
+    "opex_yuan_per_kw_year": 80,
+    "fixed_annual_cost": 8000000,
+    "opex_escalation": 0.02,
+    "working_capital_change": 0,
+    "major_repairs": {
+      "10": 50000000
+    }
+  },
+  "tax": {
+    "standard_rate": 0.25,
+    "holiday_years": 3,
+    "half_rate_years": 3
+  },
+  "financing": {
+    "debt_ratio": 0.70,
+    "interest_rate": 0.045,
+    "tenor_years": 15,
+    "grace_years": 0,
+    "repayment": "equal_principal",
+    "minimum_dscr": 1.20
+  },
+  "valuation": {
+    "wacc": 0.08,
+    "equity_hurdle": 0.11
+  },
+  "sensitivity": {
+    "hours": [1800, 2000, 2200, 2400],
+    "mechanism_prices": [0.24, 0.27, 0.30, 0.33]
+  },
+  "evidence": {
+    "generation": "[独立第三方] 示例，正式项目替换为技术顾问报告和近36个月实绩",
+    "pricing": "[官方/合同/项目实绩] 示例，正式项目替换为省级正式文件和结算单",
+    "capex": "[合同/可研] 示例，正式项目替换为概算、EPC及设备合同",
+    "financing": "[合同] 示例，正式项目替换为贷款或租赁方案",
+    "tax": "[待核实] 示例，正式项目逐项核验税收资格"
+  }
+}
