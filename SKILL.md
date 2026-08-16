@@ -1,15 +1,101 @@
 ---
-license: MIT
 name: wind-power-project-valuation-risk-review
 description: 审查风电项目估值、现金流、融资与租赁风险。
-version: 0.1.0
+version: 0.2.0
 author: stormchaser
+license: Proprietary - internal use
 platforms: [linux, macos, windows]
+evidence_grade: B
 metadata:
   hermes:
     tags: [financial-risk, wind-power, dcf, project-finance, leasing]
     related_skills: [corporate-credit-due-diligence, financial-analysis-report, financing-lease-contract-review]
-  source_note: 基于两篇微信公众号风电估值文章的方法论，经政策核验、财务勾稽与融资风控重构；不复制原文。---
+  source_note: 基于两篇微信公众号风电估值文章的方法论，经政策核验、财务勾稽与融资风控重构；不复制原文。v0.2.0 补充官方来源清单并标注证据等级。
+  sources:
+    grade_legend:
+      A: 国家部委正式发布的法规、规章、规范性文件（含政府公报/官网原文链接）
+      B: 国家部委政策解读、新闻发布会实录、部委口径的官方答复
+      C: 省级政府/省级发改委/能源局/交易中心发布的正式文件与实施方案
+      D: 行业研究、上市公司披露、媒体与公众号文章，仅作线索与方法参考
+    items:
+      - id: src-136
+        title: 关于深化新能源上网电价市场化改革 促进新能源高质量发展的通知（发改价格〔2025〕136号）
+        url: https://www.ndrc.gov.cn/xxgk/zcfb/tz/202502/t20250209_1396066.html
+        publisher: 国家发展改革委 / 国家能源局
+        date: 2025-01-27
+        grade: A
+        relevance: 新能源全电量入市、差价结算、存量/增量分界（2025-06-01）、机制电量规模与竞价、竞价上限/下限、执行期限
+      - id: src-136-jd
+        title: 国家发展改革委、国家能源局有关负责同志就深化新能源上网电价市场化改革答记者问
+        url: https://www.ndrc.gov.cn/xxgk/jd/jd/202502/t20250209_1396069.html
+        publisher: 国家发展改革委 价格司
+        date: 2025-02-09
+        grade: B
+        relevance: 存量/增量划分、实施时间不晚于2025年底、与绿证/市场建设/规划目标协同、对工商业电价影响口径
+      - id: src-xxn
+        title: 关于2025年可再生能源电力消纳责任权重及有关事项的通知（发改办能源〔2025〕669号）
+        url: https://www.ndrc.gov.cn/xxgk/zcfb/tz/202507/t20250711_1399141.html
+        publisher: 国家发展改革委办公厅 / 国家能源局综合司
+        date: 2025-07
+        grade: A
+        relevance: 各省2025/2026年消纳权重、重点用能行业绿电消费比例、权重完成情况对机制电量规模的联动、跨省跨区输送与市场交易
+      - id: src-nea-lz
+        title: 国家能源局绿证专题新闻发布会文字实录
+        url: https://www.nea.gov.cn/20250318/764a752a063f48e590068bdd521d0cee/c.html
+        publisher: 国家能源局
+        date: 2025-03-18
+        grade: B
+        relevance: 绿证与消纳责任权重、能耗双控、碳市场与CCER的衔接；深远海海上风电/光热避免重复获利的安排
+      - id: src-neia
+        title: 国家能源局2025年一季度新闻发布会文字实录
+        url: https://www.nea.gov.cn/20250123/544b9af2b6aa4590a60945e81e0d8ee1/c.html
+        publisher: 国家能源局
+        date: 2025-01-23
+        grade: B
+        relevance: 新能源全面进入平价无补贴市场化阶段、消纳承载力、可再生能源电力消纳责任权重发展引导机制
+      - id: src-ndrc-976
+        title: 电力市场计量结算基本规则（发改能源规〔2025〕976号）
+        url: https://www.ndrc.gov.cn/xxgk/zcfb/ghxwj
+        publisher: 国家发展改革委
+        date: 2025-09-26
+        grade: A
+        relevance: 电力市场结算与计量基础规则，用于核验交易结算口径
+      - id: src-jilin
+        title: 吉林省新能源上网电价市场化改革实施方案
+        url: https://xxgk.jl.gov.cn/zcbm/fgw/xxgkmlqy/202510/t20251015_9336159.html
+        publisher: 吉林省人民政府 / 吉林省发展改革委
+        date: 2025-10
+        grade: C
+        relevance: 省级增量项目竞价组织、机制电量比例、机制电价竞价、执行期限12年、市场交易均价计算原则
+      - id: src-shaanxi
+        title: 陕西省风电光伏电站开发建设管理实施办法
+        url: https://www.shaanxi.gov.cn/zfxxgk/zfgb/2024/d2q/202402/t20240206_2316753.html
+        publisher: 陕西省发展改革委 / 国家能源局西北监管局
+        date: 2024-02
+        grade: C
+        relevance: 省级风电项目开发建设管理、准建设合规与项目全流程管理
+      - id: src-dispersed
+        title: 分散式风电项目开发建设暂行管理办法
+        url: https://www.china5e.com/subject/show_1164.html
+        publisher: 国家能源局（中国能源网转载）
+        date: 2018-04
+        grade: C
+        relevance: 分散式风电核准/备案流程、前期支撑文件、两年不开工处理规则
+      - id: src-longyuan
+        title: 龙源电力 2025H1 财报（风电平均上网电价披露）
+        url: https://stcn.com/article/detail/3355492.html
+        publisher: 证券时报（转述上市公司披露）
+        date: 2025-08
+        grade: D
+        relevance: 风电平均上网电价下行、市场化交易规模扩大对发电企业收益的影响
+      - id: src-cnesa
+        title: 开源证券《政策助力预期企稳，静待绿电触底回升》
+        url: https://pdf.dfcfw.com/pdf/H3_AP202502191643256878_1.pdf
+        publisher: 开源证券研究所
+        date: 2025-02
+        grade: D
+        relevance: 各省2025年新能源入市交易安排、优先发电小时数、分布式入市差异、新能源利用率数据
+---
 
 # 风电项目估值与融资风控
 
