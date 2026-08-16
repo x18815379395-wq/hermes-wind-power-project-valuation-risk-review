@@ -3,7 +3,7 @@ license: MIT
 name: wind-power-project-valuation-risk-review
 description: 审查风电项目估值、现金流、融资与租赁风险。
 version: 0.1.0
-author: Hermes Agent Contributor
+author: stormchaser
 platforms: [linux, macos, windows]
 metadata:
   hermes:
